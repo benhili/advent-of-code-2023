@@ -8,6 +8,9 @@ fn main() {
     dbg!(output);
 }
 
+// for a given game: Game 1: red 13, blue 15; returns the game ID 1
+// if the number of cubes of each color used are less than the total
+// cubes provided in the map otherwise returns 0
 fn get_game_id_if_valid(game: &str, cube_totals: &HashMap<&str, i32>) -> u32 {
     let re = Regex::new(r"Game (\d+)").unwrap();
     let id = re.captures(game.split(':').next().unwrap()).unwrap()[1]
