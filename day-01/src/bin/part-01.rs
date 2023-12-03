@@ -7,7 +7,7 @@ fn main() {
 fn parse_line(input: &str) -> u32 {
     let first = input.chars().find_map(|c| c.to_digit(10)).unwrap();
     let last = input.chars().rev().find_map(|c| c.to_digit(10)).unwrap();
-    return 10 * first + last;
+    10 * first + last
 }
 
 fn part_one(input: &str) -> Option<u32> {
